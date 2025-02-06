@@ -44,10 +44,9 @@ body{
 }
 .main{
     display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
     flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: space-between;
 }
 .vector{
     flex-grow: 1;
@@ -55,7 +54,6 @@ body{
     background-image: url(./assets/icons/Vector.png);
     background-repeat: no-repeat;
     background-size: cover;
-    justify-content: center;
     justify-items: center;
     display: grid;
     width: auto;
@@ -167,8 +165,19 @@ img{
     width: auto;
     height: 600px;
 }
-
-
+.circle{
+    background-image: url(assets/images/myimage.png);
+    background-repeat: repeat-x;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 600px;
+    border : 2px solid #FD6F00;
+}
+.photo img{
+    width: 500px;
+    height: 550px;
+}
 @media only screen and (max-width: 810px){
     .nav ul li{
         display: none;
