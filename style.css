@@ -46,7 +46,8 @@ body{
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .vector{
     flex-grow: 1;
@@ -148,8 +149,11 @@ img{
     height: 30px;
 }
 .pop{
-    width: 250px;
-    height: 150px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 200px;
     border-radius: 10px;
     background-color: #b5adad;
     opacity: 20px;
@@ -157,18 +161,18 @@ img{
 }
 
 .photo{
+    display: grid;
     flex-grow: 1;
     flex-basis: 200;
     align-items: center;
     justify-content: center;
-    
     width: auto;
     height: 600px;
 }
 .circle{
     background-image: url(assets/images/myimage.png);
-    background-repeat: repeat-x;
-    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 500px;
     height: 500px;
     border-radius: 600px;
@@ -182,9 +186,22 @@ img{
     .nav ul li{
         display: none;
     }
+    .main{
+        gap: 0px;
+        top: 0%;
+    }
     .vector{
         text-align: center;
         justify-content: center;
+    }
+    .photo{
+        text-align: center;
+        justify-content: center;
+        height: 400px;
+    }
+    .circle{
+        width: 350px;
+        height: 350px;
     }
     .nav-for-phone-logo{
         display: block;
