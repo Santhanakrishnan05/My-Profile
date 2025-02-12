@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>POTFOLIO</title>
   <link rel="stylesheet" href="./style.css">
+  <script src="./script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
@@ -17,10 +18,10 @@
 
       <div class="nav">
         <ul>
-          <li>Home</li>
-          <li>About me</li>
-          <li>Skills</li>
-          <li>Projects</li>
+          <span class="dot" onclick="currentSlide(1)" href="./index.html"><li>Home</li></span>
+          <span class="dot" onclick="currentSlide(2)" href=""><li>About me</li></span>
+          <span class="dot" onclick="currentSlide(3)" href=""><li>Skills</li></span>
+          <span class="dot" onclick="currentSlide(4)" href=""><li>Projects</li></span>
         </ul>
       </div>
       <div class="nav-for-phone-logo">
@@ -28,8 +29,9 @@
       </div>
     </div>
     
-    <div class="main">
+    <div class="main1 mySlides fade">
 
+    
       <div class="vector">
 
         <div class="info">
@@ -48,7 +50,7 @@
         </div>
 
         <div class="btn-contact-resume">
-          <a href=""><button>Contact me</button></a>
+          <span class="dot" onclick="currentSlide(5)"><button>Contact me</button></span>
           <a href=""><button>Download CV</button></a>
         </div>
         
@@ -101,7 +103,29 @@
       </div>
 
     </div>
+
+    
+    <div class="main2 mySlides fade">
+      
+      <h1>About me</h1>
+    </div>
+    <div class="main2 mySlides fade">
+      <h1>Skills</h1>
+    </div>
+    <div class="main2 mySlides fade">
+      <h1>Projects</h1>
+    </div>
+    <div class="main2 mySlides fade">
+      <h1>Contact</h1>
+    </div>
+    
+    <div class="changer">
+      <button class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-less-than" style="color: #959595;"></i></button>
+      <button class="next" onclick="plusSlides(1)"><i class="fa-solid fa-greater-than" style="color: #959595;"></i></button>
+    </div>
     
   </div>
+
+
 </body>
 </html>
