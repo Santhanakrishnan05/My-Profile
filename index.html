@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>POTFOLIO</title>
   <link rel="stylesheet" href="./style.css">
-  <script src="./script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
@@ -25,8 +24,18 @@
         </ul>
       </div>
       <div class="nav-for-phone-logo">
-        <a href=""><i class="fa-solid fa-bars"></i></a>
+        <a href="#" id="menu-toggle"><i class="fa-solid fa-bars"></i></a>
       </div>
+    </div>
+    
+    <div class="mobile-menu">
+      <ul>
+        <li onclick="currentSlide(1); closeMobileMenu()">Home</li>
+        <li onclick="currentSlide(2); closeMobileMenu()">About me</li>
+        <li onclick="currentSlide(3); closeMobileMenu()">Skills</li>
+        <li onclick="currentSlide(4); closeMobileMenu()">Projects</li>
+        <li onclick="currentSlide(5); closeMobileMenu()">Contact</li>
+      </ul>
     </div>
     
     <div class="main1 mySlides fade">
@@ -74,26 +83,104 @@
         </div>
 
         <div class="pop" id="leet" popover role="tooltip">
-          <h1>LeetCode</h1>
-          <h3>107/3445
-            Solved</h3>
-          <h3>Easy
-            84/856</h3>
-          <h3>
-            Med.
-            21/1793</h3>
-          <h3>
-            Hard
-            2/796</h3>
-          <a style="text-decoration: none;" href="https://leetcode.com/u/Santhana_krishnan/"><h3 style="color: blueviolet;">Veiw</h3></a>
+          <h1>LeetCode Stats</h1>
+          <div class="platform-stats">
+            <div class="stat-box">
+              <h3>Problems Solved</h3>
+              <div class="stat-row">
+                <span>Total</span>
+                <span class="number">XXX</span>
+              </div>
+              <div class="stat-row">
+                <span>Easy</span>
+                <span class="number">XX</span>
+              </div>
+              <div class="stat-row">
+                <span>Medium</span>
+                <span class="number">XX</span>
+              </div>
+            </div>
+
+            <div class="stat-box">
+              <h3>Top Topics</h3>
+              <div class="badges-grid">
+                <div class="badge">Arrays</div>
+                <div class="badge">Trees</div>
+                <div class="badge">DP</div>
+                <div class="badge">Graphs</div>
+              </div>
+            </div>
+          </div>
+          <a href="your-leetcode-profile-link" target="_blank">
+            <h3>View Profile</h3>
+          </a>
         </div>                                                                        
+
         <div class="pop" id="hack" popover role="tooltip">
-          <h1>Hello</h1>
-          <h3>This is Hackerrank</h3>
+          <h1>HackerRank Stats</h1>
+          <div class="platform-stats">
+            <div class="stat-box">
+              <h3>Certifications</h3>
+              <div class="cert-list">
+                <div class="cert-item">
+                  <span>Problem Solving</span>
+                  <span class="stars">⭐⭐⭐</span>
+                </div>
+                <div class="cert-item">
+                  <span>Python</span>
+                  <span class="stars">⭐⭐⭐</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stat-box">
+              <h3>Skills</h3>
+              <div class="skills-list">
+                <div class="skill-tag">DSA</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">SQL</div>
+              </div>
+            </div>
+          </div>
+          <a href="your-hackerrank-profile-link" target="_blank">
+            <h3>View Profile</h3>
+          </a>
         </div>
+
         <div class="pop" id="gfg" popover role="tooltip">
-          <h1>Hello</h1>
-          <h3>This is GeeksforGeeks</h3>
+          <h1>GeeksforGeeks</h1>
+          <div class="platform-stats">
+            <div class="stat-box">
+              <h3>Stats</h3>
+              <div class="problem-stats">
+                <div class="stat-row">
+                  <span>Score</span>
+                  <span class="number">XXX</span>
+                </div>
+                <div class="stat-row">
+                  <span>Solved</span>
+                  <span class="number">XXX</span>
+                </div>
+                <div class="stat-row">
+                  <span>Rank</span>
+                  <span class="number">#XXX</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stat-box">
+              <h3>Top Topics</h3>
+              <div class="badges-grid">
+                <div class="badge">Arrays</div>
+                <div class="badge">Trees</div>
+                <div class="badge">DP</div>
+                <div class="badge">Graphs</div>
+              </div>
+            </div>
+          </div>
+          <a href="your-gfg-profile-link" target="_blank">
+            <h3>View Profile</h3>
+          </a>
         </div>
       
       </div>
@@ -106,17 +193,274 @@
 
     
     <div class="main2 mySlides fade">
-      
-      <h1>About me</h1>
+      <div class="about-section">
+        <h1 class="section-title">About Me</h1>
+        <div class="about-content">
+          <!-- Summary Section -->
+          <div class="about-section-container">
+            <h2 class="about-section-title">Summary</h2>
+            <div class="about-section-content">
+              <!-- You can add your summary content here -->
+              <p>A brief introduction about yourself and your professional journey.</p>
+            </div>
+          </div>
+
+          <!-- Objective Section -->
+          <div class="about-section-container">
+            <h2 class="about-section-title">Objective</h2>
+            <div class="about-section-content">
+              <!-- You can add your objective content here -->
+              <p>Your career objectives and professional goals.</p>
+            </div>
+          </div>
+
+          <!-- Personal Details Section -->
+          <div class="about-section-container">
+            <h2 class="about-section-title">Personal Details</h2>
+            <div class="about-section-content">
+              <div class="personal-details-grid">
+                <div class="detail-item">
+                  <span class="detail-label">Name:</span>
+                  <span class="detail-value">Santhana Krishnan J</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">DOB/Age:</span>
+                  <span class="detail-value">02-06-2005/19</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Location:</span>
+                  <span class="detail-value">Coimbatore,India</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Email:</span>
+                  <span class="detail-value">santhanakrishnan02065@gmail.com</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Languages:</span>
+                  <span class="detail-value">Tmail, Kannada, English</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Education:</span>
+                  <span class="detail-value">B.Tech Computer Science and Business System</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interests Section -->
+          <div class="about-section-container">
+            <h2 class="about-section-title">Interests</h2>
+            <div class="about-section-content">
+              <div class="interests-list">
+                <div class="interest-item">Web Development</div>
+                <div class="interest-item">Problem Solving</div>
+                <div class="interest-item">Software Development</div>
+                <div class="interest-item">Cloud Management</div>
+                <div class="interest-item">UI/UX Design</div>
+                <!-- Add more interests as needed -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="main2 mySlides fade">
-      <h1>Skills</h1>
+      <div class="skills-section">
+        <h1 class="section-title">Skills</h1>
+        <div class="skills-content">
+          <div class="skill-category">
+            <h2>Frontend Development</h2>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 40%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h2>Programming Languages</h2>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="fab fa-java"></i>
+                <span>java</span>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-c"></i>
+                <span>C</span>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 60%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 40%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h2>Tools & Technologies</h2>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="fa-brands fa-figma"></i>
+                <span>Figma</span>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 50%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 55%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="main2 mySlides fade">
-      <h1>Projects</h1>
+      <div class="projects-section">
+        <h1 class="section-title">Projects</h1>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-card-inner">
+              <div class="project-image">
+                <img src="assets/images/project-profile.png" alt="Project 1">
+              </div>
+              <div class="project-info">
+                <h3>Personal Portfolio</h3>
+                <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript.</p>
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/Santhanakrishnan05/My-Profile" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-inner">
+              <div class="project-image">
+                <img src="assets/images/project2.jpg" alt="Project 2">
+              </div>
+              <div class="project-info">
+                <h3>Task Manager</h3>
+                <p>A web application for managing daily tasks and to-do lists.</p>
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>Flask</span>
+                  <span>SQLite</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-inner">
+              <div class="project-image">
+                <img src="assets/images/project3.jpg" alt="Project 3">
+              </div>
+              <div class="project-info">
+                <h3>Weather App</h3>
+                <p>Real-time weather application using weather API integration.</p>
+                <div class="project-tags">
+                  <span>JavaScript</span>
+                  <span>API</span>
+                  <span>CSS</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="main2 mySlides fade">
-      <h1>Contact</h1>
+      <div class="contact-section">
+        <h1 class="section-title">Contact</h1>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div class="contact-details">
+                <h3>Email</h3>
+                <p>your.email@example.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div class="contact-details">
+                <h3>Phone</h3>
+                <p>+1 234 567 890</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="contact-details">
+                <h3>Location</h3>
+                <p>City, Country</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form">
+            <form action="https://formspree.io/f/xeoaoadv" method="POST">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" name="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+              </div>
+              <input type="hidden" name="_next" value="https://santhanakrishnan05.github.io/My-Profile/">
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     
     <div class="changer">
@@ -126,6 +470,6 @@
     
   </div>
 
-
+  <script src="./script.js"></script>
 </body>
 </html>
