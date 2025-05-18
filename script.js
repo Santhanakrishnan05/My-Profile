@@ -71,3 +71,32 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "flex";  
     dots[slideIndex-1].className += " active";
 }
+async function updateLeetCodeStats() {
+    try {
+      const response = await fetch("https://alfa-leetcode-api.onrender.com/userProfile/Santhana_krishnan");
+      const data = await response.json();
+
+      // Update problem counts
+      document.getElementById("total-solved").textContent = data.totalSolved;
+      document.getElementById("easy-solved").textContent = data.easySolved;
+      document.getElementById("medium-solved").textContent = data.mediumSolved;
+      document.getElementById("hard-solved").textContent = data.hardSolved;
+
+      // Update top topics
+      const topicsContainer = document.getElementById("top-topics");
+      topicsContainer.innerHTML = ""; // Clear existing badges
+
+      const topTopics = data.topTopics || ["Arrays", "String", "DP", "DSA"]; // fallback
+      topTopics.forEach(topic => {
+        const badge = document.createElement("div");
+        badge.className = "badge";
+        badge.textContent = topic;
+        topicsContainer.appendChild(badge);
+      });
+    } catch (error) {
+      console.error("Failed to fetch LeetCode data:", error);
+    }
+  }
+
+  // Call the function when the page loads
+  window.addEventListener("DOMContentLoaded", updateLeetCodeStats);
