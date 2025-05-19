@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>POTFOLIO</title>
+  <title>PORTFOLIO</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
@@ -82,43 +82,40 @@
           </button>
         </div>
 
-        <div class="pop" id="leet" popover role="tooltip">
-          <h1>LeetCode Stats</h1>
-          <div class="platform-stats">
-            <div class="stat-box">
-              <h3>Problems Solved</h3>
-              <div class="stat-row">
-                <span>Total</span>
-                <span class="number">121</span>
-              </div>
-              <div class="stat-row">
-                <span>Easy</span>
-                <span class="number">88</span>
-              </div>
-              <div class="stat-row">
-                <span>Medium</span>
-                <span class="number">29</span>
-              </div>
-              <div class="stat-row">
-                <span>Hard</span>
-                <span class="number">4</span>
-              </div>
-            </div>
+       <div class="pop" id="leet" popover role="tooltip">
+  <h1>LeetCode Stats</h1>
+  <div class="platform-stats">
+    <div class="stat-box">
+      <h3>Problems Solved</h3>
+      <div class="stat-row">
+        <span>Total</span>
+        <span class="number" id="total-solved">--</span>
+      </div>
+      <div class="stat-row">
+        <span>Easy</span>
+        <span class="number" id="easy-solved">--</span>
+      </div>
+      <div class="stat-row">
+        <span>Medium</span>
+        <span class="number" id="medium-solved">--</span>
+      </div>
+      <div class="stat-row">
+        <span>Hard</span>
+        <span class="number" id="hard-solved">--</span>
+      </div>
+    </div>
 
-            <div class="stat-box">
-              <h3>Top Topics</h3>
-              <div class="badges-grid">
-                <div class="badge">Arrays</div>
-                <div class="badge">String</div>
-                <div class="badge">DP</div>
-                <div class="badge">DSA</div>
-              </div>
-            </div>
-          </div>
-          <a href="https://leetcode.com/u/Santhana_krishnan/" target="_blank">
-            <h3>View Profile</h3>
-          </a>
-        </div>                                                                        
+    <div class="stat-box">
+      <h3>Top Topics</h3>
+      <div class="badges-grid" id="top-topics">
+        <!-- Dynamic topic badges will be added here -->
+      </div>
+    </div>
+  </div>
+  <a href="https://leetcode.com/u/Santhana_krishnan/" target="_blank">
+    <h3>View Profile</h3>
+  </a>
+</div>                                                                 
 
         <div class="pop" id="hack" popover role="tooltip">
           <h1>HackerRank Stats</h1>
